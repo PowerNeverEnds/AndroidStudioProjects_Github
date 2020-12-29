@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.calculateButton.setOnClickListener { calculateTip() }
+        print("2")
+        binding.calculateButton.setOnClickListener { println("1"); calculateTip() }
+
     }
 
     private fun calculateTip() {
