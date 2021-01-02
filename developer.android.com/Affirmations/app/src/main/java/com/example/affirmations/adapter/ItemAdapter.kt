@@ -9,7 +9,32 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.affirmations.R
 import com.example.affirmations.model.Affirmation
 
+/*
+https://medium.com/hongbeomi-dev/%EB%B2%88%EC%97%AD-recyclerview%EC%9D%98-%EB%82%B4%EB%B6%80-%EB%8F%99%EC%9E%91-941a2827fa5a
+https://medium.com/1mgofficial/how-recyclerview-works-internally-71290de5d2c4
+내리다가 올리게될때,(기본로직은 맨밑에)
+계속 내리면, 맨위부터 순서대로 ScrapView상태가되어 나머지 로직을거치고,
+다시 올릴경우, ScrapView의 콘텐츠(여기서는 strings.xml 의 affirmation 문자열)는 맨위에있고,
+DirtyView에는 맨위의 콘텐츠가 있고,
+따라서 바인딩할때, println(S) 는 맨위(DirtyView이므로), println(E)는 새로운 콘텐츠도 맨위(위로올렸기때문에)
+string 값이 같은건 이때문임.
+기본로직
+화면에 보이는거 create,
+스크롤되어 보이지 않게 되면 ScrapView,
+새로 화면에 보여야할때,
+.ScrapView가 있으면 DirtyView로 재사용,
+.없으면 create
+후 바인딩
 
+http://blog.naver.com/PostView.nhn?blogId=mail1001&logNo=220682221473&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postList
+https://wooooooak.github.io/android/2019/03/28/recycler_view/
+참고할만한거
+
+https://wholeman.dev/wiki/recyclerview-inside
+호출순서참고
+getItemCount -> getItemViewType -> onCreateViewHolder -> onBindViewHolder
+
+ */
 class ItemAdapter (
         private val context: Context,
         private val dataset:List<Affirmation>

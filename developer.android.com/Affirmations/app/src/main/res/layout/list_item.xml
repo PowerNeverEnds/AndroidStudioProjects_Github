@@ -3,4 +3,4 @@
     android:id="@+id/item_title"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:textSize="50sp"/>
+    android:textSize="70sp"/>
