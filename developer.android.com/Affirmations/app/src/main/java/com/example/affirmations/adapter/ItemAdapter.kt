@@ -52,7 +52,9 @@ class ItemAdapter (
         // true는 다음의 오류가 나타남.
 //        java.lang.IllegalStateException: ViewHolder views must not be attached when created. Ensure that you are not passing 'true' to the attachToRoot parameter of LayoutInflater.inflate(..., boolean attachToRoot)
 //                .inflate(R.layout.list_item,parent,true)
-        println("Create: ${adapterLayout}")
+
+//        println("Create: ${adapterLayout}")
+
         // onCreateViewHolder는 다음과 같이 1번만 실행됨
 //        I/System.out: Create: com.google.android.material.textview.MaterialTextView{18353da V.ED..... ......ID 0,0-0,0 #7f0800b6 app:id/item_title}
         return ItemViewHolder(adapterLayout)
@@ -60,15 +62,15 @@ class ItemAdapter (
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item  = dataset[position]
-        println("S Bind: ${holder.textView.text}")
+//        println("S Bind: ${holder.textView.text}")
         holder.textView.text = context.resources.getString(item.stringResourceId)
         holder.imageView.setImageResource(item.imageResourceId)
-        println("E Bind: ${holder.textView.text}")
-        println()
+//        println("E Bind: ${holder.textView.text}")
+//        println()
     }
 
     override fun getItemCount(): Int {
-//        println("Count: ${dataset.size} ${n++}")
+////        println("Count: ${dataset.size} ${n++}")
         return dataset.size
     }
 }
