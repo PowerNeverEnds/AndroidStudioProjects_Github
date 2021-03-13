@@ -23,6 +23,9 @@ class HelloAndroidActivity : AppCompatActivity() {
         startBtn.setOnClickListener(object: View.OnClickListener {
             override fun onClick(v: View?) {
                 Toast.makeText(applicationContext, "시작 버튼이 눌렸어요.", Toast.LENGTH_LONG).show()
+
+                val myIntent = Intent(applicationContext,NewActivity::class.java);
+                startActivity(myIntent);
             }
         })
 
