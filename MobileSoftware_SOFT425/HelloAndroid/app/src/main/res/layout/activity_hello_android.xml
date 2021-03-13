@@ -17,4 +17,22 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/start02Btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="네이버 접속하기"/>
+
+    <Button
+        android:id="@+id/start04Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="경북대 버튼 추가"/>
+
+    <Button
+        android:id="@+id/start03Btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="전화걸기"/>
+
 </LinearLayout>

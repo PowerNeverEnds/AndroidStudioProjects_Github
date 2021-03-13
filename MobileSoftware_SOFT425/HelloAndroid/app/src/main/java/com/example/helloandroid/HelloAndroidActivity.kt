@@ -1,6 +1,8 @@
 package com.example.helloandroid
 
 import android.content.DialogInterface
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,5 +26,28 @@ class HelloAndroidActivity : AppCompatActivity() {
             }
         })
 
+        val start02Btn = findViewById<View>(R.id.start02Btn);
+        start02Btn.setOnClickListener(object:  View.OnClickListener {
+            override fun onClick(v: View?){
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.naver.com"));
+                startActivity(myIntent);
+            }
+        })
+
+        val start04Btn = findViewById<View>(R.id.start04Btn);
+        start04Btn.setOnClickListener(object:  View.OnClickListener {
+            override fun onClick(v: View?){
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.knu.ac.kr"));
+                startActivity(myIntent);
+            }
+        })
+
+        val start03Btn = findViewById<View>(R.id.start03Btn);
+        start03Btn.setOnClickListener(object:  View.OnClickListener {
+            override fun onClick(v: View?){
+                val myIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:01077881234"));
+                startActivity(myIntent);
+            }
+        })
     }
 }
