@@ -18,8 +18,12 @@
         </activity>
 
         <activity android:name=".c04_table">
-
         </activity>
+        <activity android:name=".c04_codelayout">
+        </activity>
+        <activity android:name=".c04_codelayout2">
+        </activity>
+
     </application>
 
 </manifest>
