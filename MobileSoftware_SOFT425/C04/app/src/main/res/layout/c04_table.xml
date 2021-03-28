@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TableRow>
+            <TextView android:text="아이디"/>
+            <EditText android:text="" android:id="@+id/idET"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="비밀번호"/>
+            <EditText android:text=""/>
+        </TableRow>
+        <TableRow>
+            <Button android:text="취소"/>
+            <Button android:text="로그인" android:id="@+id/loginBtn"/>
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
