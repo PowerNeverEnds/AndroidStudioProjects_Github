@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My NFC</string>
+    <string name="textBell">하차 벨</string>
+</resources>
