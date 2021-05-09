@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">C09</string>
+    <string name="db_table">login</string>
 </resources>

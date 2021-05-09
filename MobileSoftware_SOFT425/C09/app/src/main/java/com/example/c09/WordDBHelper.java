@@ -14,7 +14,8 @@ public class WordDBHelper extends SQLiteOpenHelper {
 
     public WordDBHelper(Context context) {
 
-        super(context, "EngWord.db", null, 1);
+//        super(context, "EngWord.db", null, 1);
+        super(context, "UserInfo.db", null, 1);
 
     }
 
@@ -26,7 +27,8 @@ public class WordDBHelper extends SQLiteOpenHelper {
 
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE dic ( _id INTEGER PRIMARY KEY AUTOINCREMENT," + "eng TEXT, han TEXT);");
+//        db.execSQL("CREATE TABLE dic ( _id INTEGER PRIMARY KEY AUTOINCREMENT," + "eng TEXT, han TEXT);");
+        db.execSQL("CREATE TABLE login ( _id INTEGER PRIMARY KEY AUTOINCREMENT," + "name TEXT, pwd TEXT);");
 
     }
 
@@ -38,7 +40,8 @@ public class WordDBHelper extends SQLiteOpenHelper {
 
         // 기존 테이블 삭제후, 동일 테이블 다시 생성
 
-        db.execSQL("DROP TABLE IF EXISTS dic");
+//        db.execSQL("DROP TABLE IF EXISTS dic");
+        db.execSQL("DROP TABLE IF EXISTS login");
 
         onCreate(db);
 
