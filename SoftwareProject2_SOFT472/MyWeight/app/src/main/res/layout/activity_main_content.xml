@@ -16,9 +16,9 @@
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="page_title"
+                app:title="내몸무게"
                 app:menu="@menu/top_app_bar"
-                app:navigationIcon="@drawable/ic_launcher_foreground"
+                app:navigationIcon="@drawable/ic_baseline_account_circle_24"
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 />
         </com.google.android.material.appbar.AppBarLayout>

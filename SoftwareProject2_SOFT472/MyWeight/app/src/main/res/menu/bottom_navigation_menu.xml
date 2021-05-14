@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="menu 1"/>
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="홈"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="menu 2"/>
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="차트"/>
     <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="menu 3"/>
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="입력"/>
+    <item
+        android:id="@+id/page_4"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_fitness_center_24"
+        android:title="운동"/>
+    <item
+        android:id="@+id/page_5"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="파트너"/>
+
 </menu>

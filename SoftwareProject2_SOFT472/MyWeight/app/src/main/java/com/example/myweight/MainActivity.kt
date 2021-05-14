@@ -91,7 +91,7 @@ class MainActivity :AppCompatActivity(){
                 R.id.page_1 -> {
                     // Respond to navigation item 1 click
                     println("page_1")
-                    Toast.makeText(this.applicationContext, "Al", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this.applicationContext, "Al", Toast.LENGTH_SHORT).show()
 //                    startActivity(Intent(this, MainActivity::class.java))
                     transaction.replace(R.id.frameLayout, fragmentButton).commitAllowingStateLoss()
 
@@ -110,6 +110,14 @@ class MainActivity :AppCompatActivity(){
                  R.id.page_3 -> {
                     transaction.replace(R.id.frameLayout, fragmentButton).commitAllowingStateLoss()
                      tv.setText("Android!")
+                     true
+                 }
+                 R.id.page_4 -> {
+                     tv.setText("excersize!")
+                     true
+                 }
+                 R.id.page_5 -> {
+                     tv.setText("partner!")
                      true
                  }
                 else -> {
