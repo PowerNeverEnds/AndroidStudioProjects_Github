@@ -2,15 +2,19 @@ package com.example.myweight
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
 
 class MainActivity :AppCompatActivity(){
@@ -26,10 +30,38 @@ class MainActivity :AppCompatActivity(){
     }
 
     private fun initView(){
+        val mDrawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        // navigatoinView
+
+        val navigationView: NavigationView = findViewById<NavigationView>(R.id.nav_view)
+        navigationView.setNavigationItemSelectedListener { menuItem ->
+            mDrawerLayout.closeDrawer(GravityCompat.START)
+            when(menuItem.itemId) {
+                R.id.item1 -> {
+                    Toast.makeText(this.applicationContext, "item1",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.item2 -> {
+                    Toast.makeText(this.applicationContext, "item2",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.item3 -> {
+                    Toast.makeText(this.applicationContext, "item3",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else->false
+            }
+        }
+
         // TopAppBar
         val topAppBar = findViewById<MaterialToolbar>(R.id.topAppBar)
         topAppBar.setNavigationOnClickListener {
             Toast.makeText(this.applicationContext, "topAppBar Navigation", Toast.LENGTH_SHORT).show()
+            if(mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+                mDrawerLayout.closeDrawer(GravityCompat.START)
+            }
+            else
+                mDrawerLayout.openDrawer(GravityCompat.START)
         }
         topAppBar.setOnMenuItemClickListener { menuItem ->
             when(menuItem.itemId) {

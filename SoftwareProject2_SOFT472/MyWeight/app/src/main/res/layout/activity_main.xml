@@ -6,49 +6,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     >
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/Theme.MyWeight.AppBarOverlay">
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        >
+
+        <include
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="page_title"
-            app:menu="@menu/top_app_bar"
-            app:navigationIcon="@drawable/ic_launcher_foreground"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_height="match_parent"
+            layout="@layout/activity_main_content"
             />
-    </com.google.android.material.appbar.AppBarLayout>
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-    <TextView
-        android:id="@+id/textView"
-        android:textSize="100dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout"
-        android:text="Hello World"
-        />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        app:menu="@menu/bottom_navigation_menu"/>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:headerLayout="@layout/header_navigation_drawer"
+            app:menu="@menu/navigation_drawer"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
