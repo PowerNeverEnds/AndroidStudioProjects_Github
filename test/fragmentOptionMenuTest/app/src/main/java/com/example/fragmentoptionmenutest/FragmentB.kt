@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 
-class FragmentB : Fragment() {
+class FragmentB : MyFragment() {
     private var FragmentB: LinearLayout? = null
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -16,6 +16,7 @@ class FragmentB : Fragment() {
     ): View? {
         FragmentB = inflater.inflate(R.layout.fragment_b, container, false) as LinearLayout?
         setHasOptionsMenu(true)
+//        setDefault()
         return FragmentB
     }
 
